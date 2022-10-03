@@ -1,0 +1,21 @@
+<header style="margin-top: 2.2em;">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary static-top">
+        <div class="container" style="max-width: 95%;">
+            
+                <div class="col-sm">
+                    <div class="card border-primary bg-primary text-center p-3">
+                      <div class="card">
+                        <select class="form-control form-control-sm" onchange="location = this.value;">
+                            <option value="/">BUSCA</option>
+                            <option value="/">TODOS</option>
+                            <% pesquisas.forEach(pesquisa => { %>
+                                <option value="/<%= pesquisa.modelo %>"><%= pesquisa.modelo %></option>
+                            <% }) %>
+                        </select>
+                      </div>
+                    </div>
+                </div>
+        </div>
+    </nav>
+</header>

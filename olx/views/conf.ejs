@@ -1,0 +1,28 @@
+<%- include ("partials/header.ejs") %>
+
+<%- include ("partials/navbar.ejs") %>
+    <div class="container text-light">
+        <h1>CONFIGURAÇÕES</h1>
+        <table class="table table-sm table-striped">
+            <thead style="text-align: center;">
+                <tr>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+    
+                <% pesquisas.forEach(pesquisa =>{ %>
+                    <tr>
+                        <td class="text-light"><p class="font-weight-bold"><%= pesquisa.modelo %></p></td>
+                        <td>
+                            <a href="<%= pesquisa.link %>" target="_blank">
+                                <button type="button" class="btn btn-light"><%= pesquisa.modelo %></button>
+                            </a>
+                        </td>
+                    </tr>
+                <%})%>
+            </tbody>
+        </table>
+    </div>
+<%- include ("partials/footer.ejs") %>
